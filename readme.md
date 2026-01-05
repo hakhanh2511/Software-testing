@@ -14,4 +14,4 @@
 - Mục đích: Ghi nhận kết quả làm bài theo từng lần thực hiện
 - Số lần thực hiện: Lần 2
 - Điểm số đạt được: **7.430 điểm**
-![Kết quả lần 2]([https://github.com/hakhanh2511/Software-testing/blob/main/can,t%20unsee%20lan%201.jpg?raw=true](https://github.com/hakhanh2511/Software-testing/blob/main/can't%20unsee%20lan%202.jpg?raw=true))
+![Kết quả lần 2](https://github.com/hakhanh2511/Software-testing/blob/main/can't%20unsee%20lan%202.jpg?raw=true)

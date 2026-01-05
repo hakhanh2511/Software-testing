@@ -10,7 +10,7 @@
 
 ## Lần 2 – Ngày thực hiện: 05/01/2026 – Thời gian: 15:27
 
-- Website: CANT.UNSEE
+- Website: [CANT.UNSEE](https://cantunsee.space/)
 - Mục đích: Ghi nhận kết quả làm bài theo từng lần thực hiện
 - Số lần thực hiện: Lần 2
 - Điểm số đạt được: **7.430 điểm**

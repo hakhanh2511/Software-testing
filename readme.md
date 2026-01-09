@@ -89,4 +89,4 @@ Các test case được xây dựng nhằm kiểm tra đầy đủ các chức n
 - **testCalculateValidAverage_emptyList**  
   Kiểm tra chức năng tính điểm trung bình trong trường hợp danh sách điểm đầu vào rỗng.
 
-## Kết quả bài tập AI chương 2 
+## Kết quả bài tập AI chương 2 .

@@ -55,3 +55,36 @@ Sử dụng Maven để làm sạch và biên dịch mã nguồn:
 ```bash
 cd unit-test
 mvn clean 
+ ```
+
+### Cách chạy code test 
+```bash
+mvn test
+ ``` 
+
+### Cách chạy code test - 1 trường hợp cụ thể
+```bash
+mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_normalCase
+ ```
+## Danh sách test case
+
+Các test case được xây dựng nhằm kiểm tra đầy đủ các chức năng của chương trình **StudentAnalyzer** :
+
+- **testCountExcellentStudents_normalCase**  
+  Kiểm tra chức năng đếm số sinh viên xuất sắc với dữ liệu đầu vào hỗn hợp (bao gồm điểm hợp lệ, không hợp lệ và null).
+
+- **testCountExcellentStudents_allValid**  
+  Kiểm tra chức năng đếm sinh viên xuất sắc khi tất cả các điểm đầu vào đều hợp lệ.
+
+- **testCountExcellentStudents_emptyList**  
+  Kiểm tra chức năng đếm sinh viên xuất sắc với danh sách điểm rỗng.
+
+- **testCalculateValidAverage_mixedValues**  
+  Kiểm tra chức năng tính điểm trung bình với dữ liệu bao gồm cả giá trị hợp lệ và không hợp lệ.
+
+- **testCalculateValidAverage_boundaryValues**  
+  Kiểm tra chức năng tính điểm trung bình với các giá trị tại ngưỡng biên của miền dữ liệu.
+
+- **testCalculateValidAverage_emptyList**  
+  Kiểm tra chức năng tính điểm trung bình trong trường hợp danh sách điểm đầu vào rỗng.
+

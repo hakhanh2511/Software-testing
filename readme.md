@@ -62,9 +62,10 @@ mvn clean
 mvn test
  ``` 
 
-### Cách chạy code test - 1 trường hợp cụ thể
+### Cách chạy code test -  trường hợp cụ thể (ISSUE 3)
 ```bash
 mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_normalCase
+mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_allValid
  ```
 ## Danh sách test case
 

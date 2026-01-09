@@ -49,3 +49,9 @@ Chương trình tập trung vào việc xử lý dữ liệu điểm số sinh v
 ### Yêu cầu
 - Java **JDK 8** trở lên  
 - **Maven**
+
+### Biên dịch dự án
+Sử dụng Maven để làm sạch và biên dịch mã nguồn:
+```bash
+cd unit-test
+mvn clean 

@@ -70,7 +70,7 @@ mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_normalCase
 
 Các test case được xây dựng nhằm kiểm tra đầy đủ các chức năng của chương trình **StudentAnalyzer** :
 
-- **testCountExcellentStudents_normalCase**  
+- **testCountExcellentStudents_normalCase ( ISSUE 1)**  
   Kiểm tra chức năng đếm số sinh viên xuất sắc với dữ liệu đầu vào hỗn hợp (bao gồm điểm hợp lệ, không hợp lệ và null).
 
 - **testCountExcellentStudents_allValid**  

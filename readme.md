@@ -32,12 +32,12 @@ Chương trình tập trung vào việc xử lý dữ liệu điểm số sinh v
 
 ## Chức năng chính
 
-### 1. Đếm số sinh viên xuất sắc (`countExcellentStudents`)
+### 1. Đếm số sinh viên xuất sắc (`countExcellentStudents`) (ISSUE 1)
 - Đếm số sinh viên có điểm **từ 8.0 trở lên**.
 - Chỉ xét các điểm hợp lệ trong khoảng **[0, 10]**.
 - Bỏ qua các giá trị **null** hoặc ngoài phạm vi cho phép.
 
-### 2. Tính điểm trung bình hợp lệ (`calculateValidAverage`)
+### 2. Tính điểm trung bình hợp lệ (`calculateValidAverage`) (ISSUE 2)
 - Tính điểm trung bình của các điểm hợp lệ trong khoảng **[0, 10]**.
 - Không tính các giá trị **null** hoặc không hợp lệ.
 - Trả về **0** nếu không tồn tại điểm hợp lệ.
@@ -73,7 +73,7 @@ Các test case được xây dựng nhằm kiểm tra đầy đủ các chức n
 - **testCountExcellentStudents_normalCase ( ISSUE 1)**  
   Kiểm tra chức năng đếm số sinh viên xuất sắc với dữ liệu đầu vào hỗn hợp (bao gồm điểm hợp lệ, không hợp lệ và null).
 
-- **testCountExcellentStudents_allValid**  
+- **testCountExcellentStudents_allValid( ISSUE 2)**  
   Kiểm tra chức năng đếm sinh viên xuất sắc khi tất cả các điểm đầu vào đều hợp lệ.
 
 - **testCountExcellentStudents_emptyList**  

@@ -67,7 +67,7 @@ mvn test
 mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_normalCase
 mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_allValid
  ```
-### Danh sách test case
+### Các trường hợp kiểm thử 
 
 Các test case được xây dựng nhằm kiểm tra đầy đủ các chức năng của chương trình **StudentAnalyzer**:
 

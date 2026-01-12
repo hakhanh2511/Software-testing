@@ -27,7 +27,7 @@
 ### Bài đọc thêm - THỰC HÀNH KIỂM THỬ – `StudentAnalyzer` 
 
 ### Giới thiệu
-**StudentAnalyzer** là chương trình Java được xây dựng nhằm phục vụ cho việc thực hành kiểm thử phần mềm.  
+`StudentAnalyzer`  là chương trình Java được xây dựng nhằm phục vụ cho việc thực hành kiểm thử phần mềm.  
 Chương trình tập trung vào việc xử lý dữ liệu điểm số sinh viên, loại bỏ dữ liệu không hợp lệ và đảm bảo kết quả chính xác thông qua các bài kiểm thử đơn vị (Unit Test).
 
 ### Chức năng chính
@@ -71,7 +71,7 @@ mvn test -Dtest=StudentAnalyzerTest#testCountExcellentStudents_allValid
 
 Các test case được xây dựng nhằm kiểm tra đầy đủ các chức năng của chương trình **StudentAnalyzer**:
 
-- **testCountExcellentStudents_normalCase (ISSUE 1)**  
+- **`testCountExcellentStudents_normalCase` (ISSUE 1)**  
   Kiểm tra chức năng đếm số sinh viên xuất sắc với dữ liệu đầu vào hỗn hợp (bao gồm điểm hợp lệ, không hợp lệ và null).
 
 - **testCountExcellentStudents_allValid (ISSUE 2)**  

@@ -24,7 +24,7 @@
 
 ## CHƯƠNG 2 
 
-### Bài đọc thêm - THỰC HÀNH KIỂM THỬ – StudentAnalyzer 
+### Bài đọc thêm - THỰC HÀNH KIỂM THỬ – `StudentAnalyzer` 
 
 ### Giới thiệu
 **StudentAnalyzer** là chương trình Java được xây dựng nhằm phục vụ cho việc thực hành kiểm thử phần mềm.  

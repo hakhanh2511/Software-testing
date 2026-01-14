@@ -15,12 +15,12 @@
 - Mục đích: Ghi nhận kết quả làm bài theo từng lần thực hiện
 - Số lần thực hiện: Lần 2
 - Điểm số đạt được: **7.430 điểm**
-![Kết quả lần 2](https://github.com/hakhanh2511/Software-testing/blob/main/can't%20unsee%20lan%202.jpg?raw=true)
+![Kết quả lần 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/can't%20unsee%20lan%202.jpg)
 
 ### Kết quả bài tập AI chương 1 
 
 - Website : [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
-- ![Kết quả bài tập AI chương 1](https://github.com/hakhanh2511/Software-testing/blob/main/B%C3%A0i%20T%E1%BA%ADp%20AI%20tu%E1%BA%A7n%201.jpg)
+- ![Kết quả bài tập AI chương 1](https://github.com/hakhanh2511/Software-testing/blob/main-2/B%C3%A0i%20T%E1%BA%ADp%20AI%20tu%E1%BA%A7n%201.jpg)
 
 ## CHƯƠNG 2 
 
@@ -92,4 +92,4 @@ Các test case được xây dựng nhằm kiểm tra đầy đủ các chức n
 ### Kết quả bài tập AI chương 2 .
 
 - Website : [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
-- ![Kết quả bài tập AI chương 2](https://github.com/hakhanh2511/Software-testing/blob/main/b%C3%A0i%20t%E1%BA%ADp%20ai%20ch%C6%B0%C6%A1ng%202.jpg)
+- ![Kết quả bài tập AI chương 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/b%C3%A0i%20t%E1%BA%ADp%20ai%20ch%C6%B0%C6%A1ng%202.jpg)

@@ -91,5 +91,5 @@ Các test case được xây dựng nhằm kiểm tra đầy đủ các chức n
 
 ### Kết quả bài tập AI chương 2 
 
-- Website: [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
+- Đường dẫn: [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
 - ![Kết quả bài tập AI chương 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/b%C3%A0i%20t%E1%BA%ADp%20ai%20ch%C6%B0%C6%A1ng%202.jpg)

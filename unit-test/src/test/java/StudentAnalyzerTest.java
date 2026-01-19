@@ -1,133 +1,68 @@
+package com.example;
+
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import com.example.StudentAnalyzer;
-
 public class StudentAnalyzerTest {
 
+    private final StudentAnalyzer analyzer = new StudentAnalyzer();
+
+    // ---------------------------------------------------------
+    // KIỂM THỬ THEO BẢNG QUYẾT ĐỊNH (Sử dụng Parameterized)
+    // ---------------------------------------------------------
+    
+    @ParameterizedTest(name = "Điểm {0} => Kết quả mong đợi: {1} học sinh giỏi")
+    @CsvSource({
+        "9.0,   1",  // Rule: Điểm hợp lệ & >= 8 (Giỏi)
+        "8.0,   1",  // Rule: Biên dưới của Giỏi
+        "7.99,  0",  // Rule: Điểm hợp lệ & < 8 (Không giỏi)
+        "0.0,   0",  // Rule: Biên dưới của hợp lệ
+        "-0.01, 0",  // Rule: Ngoài khoảng dưới (Bỏ qua)
+        "10.0,  1",  // Rule: Biên trên hợp lệ & Giỏi
+        "10.01, 0"   // Rule: Ngoài khoảng trên (Bỏ qua)
+    })
+    void testCountExcellentStudents_DecisionTable(double score, int expectedCount) {
+        assertEquals(expectedCount, analyzer.countExcellentStudents(Arrays.asList(score)));
+    }
+
+    // ---------------------------------------------------------
+    // KIỂM THỬ TRƯỜNG HỢP DANH SÁCH (Mixed Cases)
+    // ---------------------------------------------------------
+
     @Test
-    public void testCountExcellentStudents_normalCase() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
+    public void testCountExcellentStudents_MixedList() {
         List<Double> scores = Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0);
+        // Giải thích: 9.0 (Giỏi), 8.5 (Giỏi), 7.0 (Hợp lệ nhưng ko giỏi), 11 & -1 (Loại)
         assertEquals(2, analyzer.countExcellentStudents(scores));
     }
 
     @Test
-    public void testCountExcellentStudents_allValid() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(3, analyzer.countExcellentStudents(Arrays.asList(8.0, 9.0, 10.0)));
+    public void testCalculateValidAverage_MixedValues() {
+        List<Double> scores = Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0);
+        // Điểm hợp lệ: 9.0, 8.5, 7.0 => Trung bình = (24.5 / 3) = 8.1666...
+        assertEquals(8.166, analyzer.calculateValidAverage(scores), 0.001);
     }
 
     @Test
-    public void testCountExcellentStudents_emptyList() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0, analyzer.countExcellentStudents(Collections.emptyList()));
-    }
-
-    @Test
-    public void testCalculateValidAverage_mixedValues() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        double avg = analyzer.calculateValidAverage(
-                Arrays.asList(9.0, 8.5, 7.0, 11.0, -1.0)
+    public void testEmptyList() {
+        assertAll("Kiểm tra danh sách rỗng",
+            () -> assertEquals(0, analyzer.countExcellentStudents(Collections.emptyList())),
+            () -> assertEquals(0, analyzer.calculateValidAverage(Collections.emptyList()), 0.001)
         );
-        assertEquals(8.17, avg, 0.01);
     }
 
     @Test
-    public void testCalculateValidAverage_boundaryValues() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(5.0,
-                analyzer.calculateValidAverage(Arrays.asList(0.0, 10.0)),
-                0.001);
-    }
-
-    @Test
-    public void testCalculateValidAverage_emptyList() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0,
-                analyzer.calculateValidAverage(Collections.emptyList()),
-                0.001);
-    }
-     // ===== TEST BỔ SUNG  =====
-
-    @Test
-    public void testCountExcellentStudents_allInvalid() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0,
-                analyzer.countExcellentStudents(Arrays.asList(-2.0, 11.5, 20.0)));
-    }
-
-    @Test
-    public void testCalculateValidAverage_allInvalid() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0,
-                analyzer.calculateValidAverage(Arrays.asList(-1.0, 11.0)),
-                0.001);
-    }
-
-    @Test
-    public void testCountExcellentStudents_singleValid() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(1,
-                analyzer.countExcellentStudents(Arrays.asList(9.0)));
-    }
-
-    @Test
-    public void testCountExcellentStudents_singleInvalid() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0,
-                analyzer.countExcellentStudents(Arrays.asList(-1.0)));
-    }
-
-    @Test
-    public void testCountExcellentStudents_excellentBoundary() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(1,
-                analyzer.countExcellentStudents(Arrays.asList(7.99, 8.0)));
-    }
- // ===== TEST BỔ SUNG =====
-
-    @Test
-    public void testCalculateValidAverage_justBelowZero() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0,
-                analyzer.calculateValidAverage(Arrays.asList(-0.01)),
-                0.001);
-    }
-
-    @Test
-    public void testCalculateValidAverage_justAboveZero() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0.01,
-                analyzer.calculateValidAverage(Arrays.asList(0.01)),
-                0.001);
-    }
-
-    @Test
-    public void testCalculateValidAverage_justBelowTen() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(9.99,
-                analyzer.calculateValidAverage(Arrays.asList(9.99)),
-                0.001);
-    }
-
-    @Test
-    public void testCalculateValidAverage_justAboveTen() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(0,
-                analyzer.calculateValidAverage(Arrays.asList(10.01)),
-                0.001);
-    }
-
-    @Test
-    public void testCalculateValidAverage_singleElementBoundary() {
-        StudentAnalyzer analyzer = new StudentAnalyzer();
-        assertEquals(8.0,
-                analyzer.calculateValidAverage(Arrays.asList(8.0)),
-                0.001);
+    public void testAllInvalidScores() {
+        List<Double> scores = Arrays.asList(-5.0, 15.0, 20.0);
+        assertAll("Kiểm tra toàn bộ điểm không hợp lệ",
+            () -> assertEquals(0, analyzer.countExcellentStudents(scores)),
+            () -> assertEquals(0, analyzer.calculateValidAverage(scores), 0.001)
+        );
     }
 }

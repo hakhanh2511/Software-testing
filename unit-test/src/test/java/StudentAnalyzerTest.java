@@ -89,5 +89,45 @@ public class StudentAnalyzerTest {
         assertEquals(1,
                 analyzer.countExcellentStudents(Arrays.asList(7.99, 8.0)));
     }
-}
+ // ===== TEST BỔ SUNG =====
+
+    @Test
+    public void testCalculateValidAverage_justBelowZero() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0,
+                analyzer.calculateValidAverage(Arrays.asList(-0.01)),
+                0.001);
+    }
+
+    @Test
+    public void testCalculateValidAverage_justAboveZero() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0.01,
+                analyzer.calculateValidAverage(Arrays.asList(0.01)),
+                0.001);
+    }
+
+    @Test
+    public void testCalculateValidAverage_justBelowTen() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(9.99,
+                analyzer.calculateValidAverage(Arrays.asList(9.99)),
+                0.001);
+    }
+
+    @Test
+    public void testCalculateValidAverage_justAboveTen() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0,
+                analyzer.calculateValidAverage(Arrays.asList(10.01)),
+                0.001);
+    }
+
+    @Test
+    public void testCalculateValidAverage_singleElementBoundary() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(8.0,
+                analyzer.calculateValidAverage(Arrays.asList(8.0)),
+                0.001);
+    }
 }

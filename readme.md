@@ -188,3 +188,23 @@ Xác minh rằng sản phẩm đầu tiên trong danh sách có giá thấp nh�
 
 ##### Kết quả:
 ![Kết quả kịch bản kiểm thử 4](https://github.com/hakhanh2511/Software-testing/blob/main-2/sort%20product%20by%20price%20test%20case.png)
+
+#### Kịch bản 5: Kiểm tra chức năng xoá sản phẩm vào giỏ hàng
+Mục tiêu: Kiểm tra xem người dùng có thể thêm một sản phẩm vào giỏ hàng sau khi đăng nhập.
+
+##### Các bước thực hiện:
+
+Đăng nhập với thông tin hợp lệ (standard_user/secret_sauce).
+
+Nhấn nút "Remove" của sản phẩm đầu tiên trong danh sách.
+
+Xác minh rằng sản phẩm đã bị xoá khỏi giỏ hàng.
+
+##### Kết quả:
+![Kết quả kịch bản kiểm thử 5](https://github.com/hakhanh2511/Software-testing/blob/main-2/delete%20product%20test%20case.png)
+
+#### Kịch bản 6: Kiểm tra quy trình mua hàng hoàn thiện 
+
+##### Kết quả:
+![Kết quả kịch bản kiểm thử 6](https://github.com/hakhanh2511/Software-testing/blob/main-2/Screenshot%202026-01-19%20135540.png)
+

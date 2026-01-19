@@ -52,4 +52,42 @@ public class StudentAnalyzerTest {
                 analyzer.calculateValidAverage(Collections.emptyList()),
                 0.001);
     }
+     // ===== TEST BỔ SUNG  =====
+
+    @Test
+    public void testCountExcellentStudents_allInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0,
+                analyzer.countExcellentStudents(Arrays.asList(-2.0, 11.5, 20.0)));
+    }
+
+    @Test
+    public void testCalculateValidAverage_allInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0,
+                analyzer.calculateValidAverage(Arrays.asList(-1.0, 11.0)),
+                0.001);
+    }
+
+    @Test
+    public void testCountExcellentStudents_singleValid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(1,
+                analyzer.countExcellentStudents(Arrays.asList(9.0)));
+    }
+
+    @Test
+    public void testCountExcellentStudents_singleInvalid() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(0,
+                analyzer.countExcellentStudents(Arrays.asList(-1.0)));
+    }
+
+    @Test
+    public void testCountExcellentStudents_excellentBoundary() {
+        StudentAnalyzer analyzer = new StudentAnalyzer();
+        assertEquals(1,
+                analyzer.countExcellentStudents(Arrays.asList(7.99, 8.0)));
+    }
+}
 }

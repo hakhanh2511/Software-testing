@@ -1,6 +1,6 @@
 # BÁO CÁO MÔN HỌC KIỂM THỬ PHẦN MỀM
 
-## CHƯƠNG 1 
+## CHƯƠNG 1 - Nguyên lí của kiểm thử 
 ### Lần 1 – Ngày thực hiện: 05/01/2026 – Thời gian: 14:17
 
 - Đường dẫn: [Can't Unsee](https://cantunsee.space/)
@@ -22,7 +22,7 @@
 - Đường dẫn: [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
 ![Kết quả bài tập AI chương 1](https://github.com/hakhanh2511/Software-testing/blob/main-2/B%C3%A0i%20T%E1%BA%ADp%20AI%20tu%E1%BA%A7n%201.jpg)
 
-## CHƯƠNG 2 
+## CHƯƠNG 2 - Quy trình kiểm thử
 
 ### Bài đọc thêm - Thực hành kiểm thử – `StudentAnalyzer` 
 
@@ -93,3 +93,70 @@ Các test case được xây dựng nhằm kiểm tra đầy đủ các chức n
 
 - Đường dẫn: [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
 ![Kết quả bài tập AI chương 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/b%C3%A0i%20t%E1%BA%ADp%20ai%20ch%C6%B0%C6%A1ng%202.jpg)
+
+## CHƯƠNG 3 - Kiểm thử tĩnh 
+
+### Bài đọc thêm - Kiểm thử tự động End-to-End với Cypress
+
+### Giới thiệu 
+Cypress là một framework kiểm thử tự động End-to-End (E2E) hiện đại dành cho các ứng dụng web. Cypress được thiết kế nhằm giúp lập trình viên và kiểm thử viên dễ dàng viết, chạy và gỡ lỗi các bài kiểm thử giao diện người dùng trực tiếp trên trình duyệt.
+
+Khác với nhiều công cụ kiểm thử truyền thống, Cypress chạy trực tiếp trong trình duyệt, cho phép kiểm soát toàn bộ luồng thực thi của ứng dụng web và cung cấp khả năng quan sát chi tiết từng bước kiểm thử.
+
+### Hướng dẫn chạy chương trình
+
+#### Tạo một thư mục dự án mới và khởi tạo npm:
+```bash
+mkdir cypress-exercise
+cd cypress-exercise
+npm init -y
+ ```
+
+#### Cài đặt Cypress:
+```bash
+npm install cypress --save-dev
+ ```
+
+#### Mở Cypress:
+```bash
+npx cypress open
+ ```
+Sau khi chạy lệnh này, Cypress sẽ tạo cấu trúc thư mục và các tệp mẫu trong thư mục cypress.
+
+#### Các kịch bản kiểm thử
+
+##### Kịch bản 1: Kiểm tra đăng nhập thành công
+Mục tiêu: Kiểm tra xem người dùng có thể đăng nhập thành công với thông tin hợp lệ.
+
+##### Các bước thực hiện:
+
+Truy cập trang https://www.saucedemo.com.
+
+Nhập tên người dùng: standard_user.
+
+Nhập mật khẩu: secret_sauce.
+
+Nhấn nút "Login".
+
+Xác minh rằng trang được chuyển hướng đến trang danh sách sản phẩm (URL chứa /inventory.html).
+
+##### Kết quả:
+![Kết quả kịch bản kiểm thử 1](https://github.com/hakhanh2511/Software-testing/blob/main-2/test%20case%20login%20success.png)
+
+#### Kịch bản 2: Kiểm tra đăng nhập thất bại
+Mục tiêu: Kiểm tra xem hệ thống hiển thị thông báo lỗi khi đăng nhập với thông tin không hợp lệ.
+
+##### Các bước thực hiện:
+
+Truy cập trang https://www.saucedemo.com.
+
+Nhập tên người dùng: invalid_user.
+
+Nhập mật khẩu: wrong_password.
+
+Nhấn nút "Login".
+
+Xác minh rằng thông báo lỗi được hiển thị với nội dung: Username and password do not match.
+
+##### Kết quả:
+![Kết quả kịch bản kiểm thử 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/test%20case%20login%20failed.png)

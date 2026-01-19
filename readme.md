@@ -125,7 +125,7 @@ Sau khi chạy lệnh này, Cypress sẽ tạo cấu trúc thư mục và các t
 
 #### Các kịch bản kiểm thử
 
-##### Kịch bản 1: Kiểm tra đăng nhập thành công
+#### Kịch bản 1: Kiểm tra đăng nhập thành công
 Mục tiêu: Kiểm tra xem người dùng có thể đăng nhập thành công với thông tin hợp lệ.
 
 ##### Các bước thực hiện:
@@ -160,3 +160,31 @@ Xác minh rằng thông báo lỗi được hiển thị với nội dung: Usern
 
 ##### Kết quả:
 ![Kết quả kịch bản kiểm thử 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/test%20case%20login%20failed.png)
+
+#### Kịch bản 3: Kiểm tra chức năng thêm sản phẩm vào giỏ hàng
+Mục tiêu: Kiểm tra xem người dùng có thể thêm một sản phẩm vào giỏ hàng sau khi đăng nhập.
+
+##### Các bước thực hiện:
+
+Đăng nhập với thông tin hợp lệ (standard_user/secret_sauce).
+
+Nhấn nút "Add to cart" của sản phẩm đầu tiên trong danh sách.
+
+Xác minh rằng số lượng sản phẩm trong giỏ hàng hiển thị là 1.
+
+##### Kết quả:
+![Kết quả kịch bản kiểm thử 3](https://github.com/hakhanh2511/Software-testing/blob/main-2/add%20product%20to%20cart%20test%20case.png)
+
+#### Kịch bản 4: Kiểm tra chức năng tìm kiếm sản phẩm
+Mục tiêu: Kiểm tra xem bộ lọc sản phẩm hoạt động đúng khi chọn "Price (low to high)".
+
+##### Bước thực hiện:
+
+Đăng nhập với thông tin hợp lệ.
+
+Chọn bộ lọc "Price (low to high)" từ dropdown.
+
+Xác minh rằng sản phẩm đầu tiên trong danh sách có giá thấp nhất.
+
+##### Kết quả:
+![Kết quả kịch bản kiểm thử 4](https://github.com/hakhanh2511/Software-testing/blob/main-2/sort%20product%20by%20price%20test%20case.png)

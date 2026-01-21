@@ -208,3 +208,8 @@ Xác minh rằng sản phẩm đã bị xoá khỏi giỏ hàng.
 ##### Kết quả:
 ![Kết quả kịch bản kiểm thử 6](https://github.com/hakhanh2511/Software-testing/blob/main-2/Screenshot%202026-01-19%20135540.png)
 
+### Kết quả bài tập AI chương 1 
+
+- Đường dẫn: [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
+  
+![Kết quả bài tập AI chương 3](https://github.com/hakhanh2511/Software-testing/blob/main-2/b%C3%A0i%20t%E1%BA%ADp%20ai%20ch%C6%B0%C6%A1ng%203.png)

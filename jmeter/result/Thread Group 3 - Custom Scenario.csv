@@ -1,0 +1,4 @@
+Label,# Samples,Average,Min,Max,Std. Dev.,Error %,Throughput,Received KB/sec,Sent KB/sec,Avg. Bytes
+GET Wiki Main Page,2164,377,309,2499,70.96,0.000%,35.90271,8286.19,7.19,236334.7
+GET Wiki Software Testing,2153,134,109,585,22.02,0.000%,36.20008,15367.38,7.49,434700.6
+TOTAL,4317,256,109,2499,132.10,0.000%,71.62292,23449.86,14.58,335264.9

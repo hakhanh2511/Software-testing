@@ -233,16 +233,19 @@ Xác minh rằng sản phẩm đã bị xoá khỏi giỏ hàng.
 - Số người dùng: 10
 - Số vòng lặp: 5
 - Hành vi: Gửi HTTP GET đến trang chủ
+![Kết quả kịch bản 1](https://github.com/hakhanh2511/Software-testing/blob/main-2/jmeter/Screenshot/Thread%20Group%201%20-%20Basic%20Load.png)
 
 ### Thread Group 2 – Kịch bản tải nặng
 - Số người dùng: 50
 - Ramp-up: 30 giây
 - Hành vi: GET trang chủ và trang con (/the-gioi)
+![Kết quả kịch bản 2](https://github.com/hakhanh2511/Software-testing/blob/main-2/jmeter/Screenshot/Thread%20Group%202%20-%20Heavy%20Load.png)
 
 ### Thread Group 3 – Kịch bản tùy chỉnh
 - Số người dùng: 20
 - Thời gian chạy: 60 giây
 - Hành vi: GET hai trang con (/kinh-doanh, /the-thao)
+![Kết quả kịch bản 3](https://github.com/hakhanh2511/Software-testing/blob/main-2/jmeter/Screenshot/Thread%20Group%203%20-%20Custom%20Scenario.png)
 
 
 

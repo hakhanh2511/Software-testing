@@ -208,8 +208,45 @@ Xác minh rằng sản phẩm đã bị xoá khỏi giỏ hàng.
 ##### Kết quả:
 ![Kết quả kịch bản kiểm thử 6](https://github.com/hakhanh2511/Software-testing/blob/main-2/Screenshot%202026-01-19%20135540.png)
 
-### Kết quả bài tập AI chương 1 
+### Kết quả bài tập AI chương 3 
 
 - Đường dẫn: [EDUX – CMCU Elearning](https://edux.cmcu.edu.vn/subject?id=cc41f2eb-373b-478e-8381-4ff9589544d9)
   
 ![Kết quả bài tập AI chương 3](https://github.com/hakhanh2511/Software-testing/blob/main-2/b%C3%A0i%20t%E1%BA%ADp%20ai%20ch%C6%B0%C6%A1ng%203.png)
+
+## CHƯƠNG 4 - Kiểm thử tự động 
+
+### Bài đọc thêm - Thực hành kiểm thử – `Kiểm thử hiệu năng với JMeter`
+
+
+
+## 1. Giới thiệu 
+- Website được kiểm thử: https://vnexpress.net &  https://en.wikipedia.org
+- Công cụ: Apache JMeter
+- Mục tiêu: Đánh giá hiệu năng website với các mức tải khác nhau
+
+
+
+## 2. Mô tả các kịch bản kiểm thử và kết quả 
+
+### Thread Group 1 – Kịch bản cơ bản
+- Số người dùng: 10
+- Số vòng lặp: 5
+- Hành vi: Gửi HTTP GET đến trang chủ
+
+### Thread Group 2 – Kịch bản tải nặng
+- Số người dùng: 50
+- Ramp-up: 30 giây
+- Hành vi: GET trang chủ và trang con (/the-gioi)
+
+### Thread Group 3 – Kịch bản tùy chỉnh
+- Số người dùng: 20
+- Thời gian chạy: 60 giây
+- Hành vi: GET hai trang con (/kinh-doanh, /the-thao)
+
+
+
+
+
+
+

@@ -19,13 +19,23 @@ public class StudentAnalyzerTest {
     
     @ParameterizedTest(name = "Điểm {0} => Kết quả mong đợi: {1} học sinh giỏi")
     @CsvSource({
-        "9.0,   1",  // Rule: Điểm hợp lệ & >= 8 (Giỏi)
-        "8.0,   1",  // Rule: Biên dưới của Giỏi
-        "7.99,  0",  // Rule: Điểm hợp lệ & < 8 (Không giỏi)
-        "0.0,   0",  // Rule: Biên dưới của hợp lệ
-        "-0.01, 0",  // Rule: Ngoài khoảng dưới (Bỏ qua)
-        "10.0,  1",  // Rule: Biên trên hợp lệ & Giỏi
-        "10.01, 0"   // Rule: Ngoài khoảng trên (Bỏ qua)
+  // DECISION TABLE:
+    // ┌─────────────────────────┬──────────┬─────────────────┬────────────┐
+    // │ Điều kiện               │ Test Case│ Input (score)   │ Output     │
+    // ├─────────────────────────┼──────────┼─────────────────┼────────────┤
+    // │ Hợp lệ & Giỏi           │ 1, 2, 6  │ 9.0, 8.0, 10.0  │ 1          │
+    // │ Hợp lệ & Không giỏi     │ 3, 4     │ 7.99, 0.0       │ 0          │
+    // │ Không hợp lệ (< 0)      │ 5        │ -0.01           │ 0          │
+    // │ Không hợp lệ (> 10)     │ 7        │ 10.01           │ 0          │
+    // └─────────────────────────┴──────────┴─────────────────┴────────────┘
+    
+    "9.0,   1",  // TC1: Hợp lệ & Giỏi
+    "8.0,   1",  // TC2: Hợp lệ & Giỏi (biên dưới)
+    "7.99,  0",  // TC3: Hợp lệ & Không giỏi
+    "0.0,   0",  // TC4: Hợp lệ & Không giỏi (biên dưới)
+    "-0.01, 0",  // TC5: Không hợp lệ (< 0)
+    "10.0,  1",  // TC6: Hợp lệ & Giỏi (biên trên)
+    "10.01, 0"   // TC7: Không hợp lệ (> 10)
     })
     void testCountExcellentStudents_DecisionTable(double score, int expectedCount) {
         assertEquals(expectedCount, analyzer.countExcellentStudents(Arrays.asList(score)));
